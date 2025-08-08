@@ -22,7 +22,7 @@ A playable game interface that uses the same modules than the ones used for the 
 This folder contains functions that are essential for the above script to work.
  - deal.R (initializes a new game object and distributes cards)
  - draw.R (puts the last card on the stock pile at the bottom. I did not implement a waste pile here.)
- - mv.R (a 500-line spaghetti of nested if-else statements to move card between columns while checking for the validity of the moves.)
+ - mv.R (a spaghetti of nested if-else statements to move card between columns while checking for the validity of the moves.)
  - playRandom.R (creates a new game and plays it with random moves. This is the "engine" of the `sol6_100k` solver.
  - viewGameState.R (used for the interactive player to show the game object as columns of cards, which is nicer than printing the game object itself.) 
 

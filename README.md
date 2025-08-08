@@ -1,4 +1,4 @@
-# Six-card Klondike Solitaire in R
+# Six-Card Solitaire 
 A toy implementation of a miniaturized 6-card Klondike solitaire game (no suits, two columns, one foundation pile). 
 
 I made this to learn how to make a card game solver and (trying to attempt to maybe one day...) make a decent user interface for interactive play. 

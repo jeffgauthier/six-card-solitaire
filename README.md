@@ -40,7 +40,7 @@ The game's data structure is a list of integer vectors. An initialized game obje
 myGame <- list(
   cards = c(1,2,3,4,5,6)   ### stock pile   
   pile = character(0)      ### foundation pile
-  col1 = character(0)      ### tableau columnn 1
+  col1 = character(0)      ### tableau column 1
   col2 = character(0)      ### tableau column 2
 )
 ```

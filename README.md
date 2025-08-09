@@ -1,7 +1,7 @@
 # Six-Card Solitaire 
 A toy implementation of a miniaturized 6-card Klondike solitaire game (no suits, two columns, one foundation pile). 
 
-I made this to learn how to make a card game solver and (trying to attempt to maybe one day...) make a decent user interface for interactive play. 
+I made this to learn how to make a card game solver, study solitaire probabilities, and (maybe one day) make a decent user interface for interactive play. 
 
 All coded in base R except for one library (Rmisc) to compile statistics. The script will attempt to install it if not already installed. 
 
@@ -18,11 +18,11 @@ A playable game interface that uses the same modules than the ones used for the 
 
 ## modules/
 This folder contains functions that are essential for the above script to work.
- - deal.R (initializes a new game object and distributes cards)
- - draw.R (puts the last card on the stock pile at the bottom. I did not implement a waste pile here.)
- - mv.R (a spaghetti of nested if-else statements to move card between columns while checking for the validity of the moves.)
- - playRandom.R (creates a new game and plays it with random moves. This is the "engine" of the `sol6_100k` solver.
- - viewGameState.R (used for the interactive player to show the game object as columns of cards, which is nicer than printing the game object itself.) 
+ - **deal.R** (initializes a new game object and distributes cards)
+ - **draw.R** (puts the last card on the stock pile at the bottom. I did not implement a waste pile here.)
+ - **mv.R** (a spaghetti of nested if-else statements to move cards between columns while checking for the validity of the moves.)
+ - **playRandom.R** (creates a new game and plays it with random moves). This is the "engine" of the `sol6_100k` solver.
+ - **viewGameState.R** (used for the interactive player to show the game object as columns of cards, which is nicer than printing the game object itself.) 
 
 # Game definition
 

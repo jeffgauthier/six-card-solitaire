@@ -5,8 +5,6 @@ I made this to learn how to make a card game solver and (trying to attempt to ma
 
 All coded in base R except for one library (Rmisc) to compile statistics. The script will attempt to install it if not already installed. 
 
----
-
 # Contents
 
 ## sol6_100k.R 
@@ -26,25 +24,33 @@ This folder contains functions that are essential for the above script to work.
  - playRandom.R (creates a new game and plays it with random moves. This is the "engine" of the `sol6_100k` solver.
  - viewGameState.R (used for the interactive player to show the game object as columns of cards, which is nicer than printing the game object itself.) 
 
----
-
 # GAME DEFINITION
 
-## LAYOUT OF THE GAME
+## Layout
  - Six cards (1,2,3,4,5,6)
  - No suits
  - Two columns (first = two cards, 2nd = two cards)
  - One foundation pile
  - One stock pile
 
-## DEALING CARDS
+## How cards are dealt
  - Cards are dealt from index 1 to 6
  - One card in column 1
  - Two cards in column 2
  - then the rest goes in the stock pile.
  - All cards are visible
 
-## GAME RULES
+## Rules
+Rules are the same for Klondike solitaire with a few conventions and exceptions (...and much less cards):
+
  - The last card (highest index) in each column or pile is the face-up card.
- - One card can be moved at at time (no sequence moves)
- - Drawing a card = putting the face-up card at the bottom (shifting an array to the right)
+ - Drawing a card = putting the face-up card of the Stock pile at the bottom (1,2,3 -> 3,1,2).
+ - There is no waste pile.
+ - One card can be moved at at time (no sequence moves).
+ - Cards can be moved :
+   - from the Stock pile to the Tableau's columns (but must be arranged in descending order);
+   - Between columns;
+   - From the stock pile to the Foundation (in ascending order);
+   - From a column to the Foundation (in ascending order).
+ - Cards in the Foundation cannot go back to the Tableau or the Stock pile.
+ - The game is won when all cards are in the Foundation pile in ascending order (1,2,3,4,5,6).
